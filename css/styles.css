@@ -10,6 +10,8 @@
     --background-hero-color: #C4C4C4;;
     --contacts-footer-color: rgba(255, 255, 255, 0.6);
     --card-border: #EEEEEE;
+    --icon-social: #AFB1B8;
+    --icon-footer-social-bgc: rgba(255, 255, 255, 0.1);
    
 }
 
@@ -95,11 +97,16 @@ body {
 }
 
 .contacts .contacts-header+.contacts-header {
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-right: 0;
 }
 
 .contacts-header {
+    
+    display: flex;
+    align-items: center;
     color: var(--primary-text-color);
+
 }
 
 .container {
@@ -110,6 +117,13 @@ body {
     padding-right: 15px;
     /* outline: 2px solid tomato; */
 }
+
+.icon-mail,
+.icon-phone {
+    margin-right: 10px;
+    fill: currentColor;
+    }
+
 
 /* Hero */
 
@@ -274,6 +288,11 @@ body {
     justify-content: space-between;
 }
 
+.team img,
+.work-descr img {
+    display: block;
+}
+
 .team .item {
     width: 270px;
     background-color: var(--primary-white-color);
@@ -285,8 +304,7 @@ body {
 }
 
 .team-name {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 32px;
 }
 
 .team .title {
@@ -300,7 +318,7 @@ body {
 }
 
 .team .text {
-    margin: 0;
+    margin: 0 0 16px 0;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -311,12 +329,74 @@ body {
     
 }
 
+.socials-list{
+    display: flex;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.social-item {
+    flex-basis: calc((100%-10px*3)/4);
+}
+
+.social-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    color: var(--icon-social);
+    cursor: pointer;
+}
+
+.social-icon {
+    fill: currentColor;
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+}
+
 /* Клієнти */
 
-.clients {
+.clients-list {
     display: flex;
-    justify-content: space-between;
+    margin: 0 auto;
+    gap: 30px;
 }
+
+.clients-item {
+    flex-basis: calc((100%-30px*5)/6);
+}
+
+.clients-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid var(--icon-social);
+    border-radius: 4px;
+    color: var(--icon-social);
+    cursor: pointer;
+}
+
+.clients-icon {
+    fill: currentColor;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+
 
 /* Footer */
 
@@ -326,13 +406,19 @@ body {
     background-color: var(--background-accent-color);
 }
 
-.bg-footer a {
+
+
+/* .bg-footer a {
     display: inline-block;
-}
+} */
 
 .logo.mrg-logo {
     padding: 0;
-    margin-bottom: 20px;
+}
+
+.contacts-list {
+    display: block;
+    margin-top: 20px;
 }
 
 .logo-footer {
@@ -350,6 +436,7 @@ body {
 }
 
 .contacts-footer {
+    display: block;
     margin-top: 9px;
     color: var(--contacts-footer-color);
 }
@@ -371,46 +458,38 @@ body {
     color: var(--primary-white-color);
 }
 
-.social {
+
+.footer-social-list {
     display: flex;
-    flex-wrap: wrap;
+    margin: 0 auto;
     gap: 10px;
-    /* flex-basis: calc((100% - 3*10px) /4); */
-    
 }
 
-.social-link {
+.footer-social-item {
+    flex-basis: calc((100%-10px*3)/4);
+
+}
+
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
 
     border-radius: 50%;
     color: var(--primary-white-color);
-    background-color: rgba(255, 255, 255, 0.1);
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.social-link:hover,
-.social-link:focus {
-    background-color: var(--accent-color);
+    background-color: var(--icon-footer-social-bgc);
     cursor: pointer;
 }
 
-.icon-insta {
-    background-image: url(../images/instagram2.svg);
+.footer-social-icon {
+    fill: currentColor;
 }
 
-.icon-twitter {
-    background-image: url(../images/twitter2.svg);
-}
-
-.icon-fb {
-    background-image: url(../images/facebook2.svg);
-}
-
-.icon-lin {
-    background-image: url(../images/linkedin2.svg);
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--accent-color);
 }
 
 .footer-wraper {
